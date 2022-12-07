@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    size = len(matrix)
-    matrix_ = [[matrix[j][i]**2 for i in range(size)]for j in range(size)]
+    matrix_ = []
+    for i in matrix:
+        matrix_.append(list(map((lambda x: x ** 2), i)))
     return matrix_
