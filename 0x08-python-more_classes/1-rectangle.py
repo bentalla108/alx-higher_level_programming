@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Rectangle Module """
 
+
 class Rectangle:
     """ Rectangle Class"""
     def __init__(self, width=0, height=0):
@@ -16,12 +17,12 @@ class Rectangle:
     def width(self, value):
         """Set the width of the rectangle """
         if not isinstance(value, int):
-             raise ValueError("width must be an integer")
+            raise ValueError("width must be an integer")
 
-        if value < 0 :
+        if value < 0:
             raise ValueError("width must be >= 0")
-        
-        self.__width = value 
+
+        self.__width = value
 
     @property
     def height(self):
@@ -33,6 +34,6 @@ class Rectangle:
         """Set the height of the rectangle """
         if not isinstance(value, int):
             raise ValueError("height must be an integer")
-        if value < 0 :
+        if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
