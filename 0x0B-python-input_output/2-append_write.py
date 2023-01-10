@@ -2,7 +2,7 @@
 """Module that append a file """
 
 
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """ Read file fonction"""
     with open(filename, 'a', encoding="utf-8") as file:
         file_data = file.write(text)
