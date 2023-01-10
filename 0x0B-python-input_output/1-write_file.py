@@ -7,3 +7,4 @@ def write_file(filename="", text=""):
     with open(filename, 'w', encoding="utf-8") as file:
         file_data = file.write(text)
         file.close()
+    return file_data
