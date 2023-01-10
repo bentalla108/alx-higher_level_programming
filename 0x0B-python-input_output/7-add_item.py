@@ -5,12 +5,16 @@ from sys import argv
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 
-# alternative to check if file exist :os.path.exists(file)
-try:
-    liste = load_from_json_file(file_name)
-except Except:
-    liste = []
-for argument in argv[1:]:
-    liste.append(argument)
 
-save_to_json_file(liste, file_name)
+file_name = "add_item.json"
+
+# Alternative to try<> except os.path.exists(file)
+#
+try:
+    json_list = load_from_json_file(file_name)
+except:
+    json_list = []
+for item in argv[1:]:
+    json_list.append(item)
+
+save_to_json_file(json_list, file_name)
