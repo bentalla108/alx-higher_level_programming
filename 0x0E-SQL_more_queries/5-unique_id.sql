@@ -1,4 +1,3 @@
--- script that creates the table id_not_null
--- id_not_null description:  ID Name
+-- script that creates the table unique_id
 
-CREATE TABLE IF NOT EXISTS id_not_null (id INT DEFAULT 1 UNIQUE , name VARCHAR(256));
+CREATE TABLE IF NOT EXISTS unique_id (id INT DEFAULT 1 UNIQUE , name VARCHAR(256));
