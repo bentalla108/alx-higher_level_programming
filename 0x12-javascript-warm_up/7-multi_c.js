@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const x = Number.parseInt(process.argv[2], 10);
-if (isNaN(x)) {
+if (!Number.isInteger(x)) {
   console.log('Missing number of occurrences');
 } else {
   for (let i = 0; i < x; i++) {
