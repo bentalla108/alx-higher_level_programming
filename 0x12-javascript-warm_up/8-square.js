@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const size = Number.parseInt(process.argv[2], 10);
-if (isNaN(size)) {
+if (!Number.isInteger(size)) {
   console.log('Missing size');
 } else {
   let sq = '';
