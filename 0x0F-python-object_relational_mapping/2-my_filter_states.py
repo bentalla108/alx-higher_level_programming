@@ -12,9 +12,10 @@ if __name__ == "__main__":
             db=argv[3])
 
     searching = argv[4]
+    query = """SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY
+                    states.id ASC"""
     cursor = db.cursor()
-    cursor.execute("""SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY
-                    states.id ASC""".format(searching))
+    cursor.execute(query.format(searching))
     rows = cursor.fetchall()
     for row in rows:
         print(row)
