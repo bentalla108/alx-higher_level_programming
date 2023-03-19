@@ -15,6 +15,7 @@ if __name__ == "__main__":
                     states.id ASC""",)
     rows = cursor.fetchall()
     for row in rows:
-        print(row)
+        if row[1].startswith("N"):
+            print(row)
     cursor.close()
     db.close()
