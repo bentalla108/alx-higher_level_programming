@@ -11,14 +11,13 @@ if __name__ == "__main__":
             passwd=argv[2],
             db=argv[3])
 
-    searching = argv[4]
     query = '''
         SELECT cities.id, cities.name, states.name FROM cities
         LEFT JOIN states ON cities.state_id = states.id
         ORDER BY cities.id
         '''
     cursor = db.cursor()
-    cursor.execute(query,)
+    cursor.execute(query)
     rows = cursor.fetchall()
     for row in rows:
         print(row)
