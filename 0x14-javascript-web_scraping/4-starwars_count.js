@@ -2,7 +2,7 @@
 
 const r = require('request');
 const url = 'https://swapi-api.alx-tools.com/api/films/';
-const id = '18';
+const id = 18;
 
 r(url, (err, reponse, body) => {
   if (err) {
@@ -12,9 +12,11 @@ r(url, (err, reponse, body) => {
   let count = 0;
   if (resultquery) {
     resultquery.forEach(element => {
-      if (element.characters.includes(id)) {
-        count++;
-      }
+      element.characters.forEach(characterUrl => {
+        if (characterUrl.includes(id)) {
+          count++;
+        }
+      });
     });
   }
   console.log(resultquery ? count : 'error code: ' + reponse.statusCode);
