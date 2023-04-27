@@ -12,4 +12,3 @@ r(url, (err, reponse, body) => {
   const count = resultquery ? resultquery.filter(element => element.characters.includes(`https://swapi-api.alx-tools.com/api/people/${id}/`)).length : 0;
   console.log(resultquery ? count : 'error code: ' + reponse.statusCode);
 });
-
