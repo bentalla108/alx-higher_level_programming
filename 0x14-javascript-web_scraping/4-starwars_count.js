@@ -21,4 +21,3 @@ r(url, (err, reponse, body) => {
   }
   console.log(resultquery ? count : 'error code: ' + reponse.statusCode);
 });
-
